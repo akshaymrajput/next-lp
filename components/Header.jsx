@@ -13,7 +13,7 @@ const Header = () => {
                 priority="high"
                 className="object-cover"
             />
-            <div className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-1/3 mix-blend-screen">
+            <div className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-1/3 mix-blend-screen w-full sm:w-auto p-4">
                 <div className="flex flex-col gap-8 justify-center items-center text-white">
                     <Image
                         src="https://www.intract.io/assets/academy-animated-logo-57b2ae61.gif"
@@ -34,8 +34,8 @@ const Header = () => {
                             </span>
                         </p>
                     </div>
-                    <div className="max-w-[300px]">
-                        <button className="text-white w-full bg-[#6435e9] bg-opacity-70 rounded-lg px-12 py-2 flex justify-center items-center gap-2 hover:translate-x-1 transition-transform duration-150">
+                    <div className="w-full flex justify-center max-w-[300px]">
+                        <button className="text-white w-full text-xs sm:text-base sm:w-52 bg-[#6435e9] bg-opacity-70 rounded-lg h-10 flex justify-center items-center gap-2 hover:pl-2 transition-all duration-150">
                             <span>Get Started</span>
                             <span>
                                 <FaArrowRightLong />
