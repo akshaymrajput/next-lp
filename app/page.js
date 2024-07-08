@@ -1,3 +1,5 @@
+"use client";
+
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
@@ -5,8 +7,20 @@ import LearningHub from "@/components/LearningHub";
 import Dictionary from "@/components/Dictionary";
 import Toggle from "@/components/Toggle";
 import Roadmap from "@/components/Roadmap";
+import { useEffect, useState } from "react";
+import Loader from "@/components/Loader";
 
 export default function Home() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 1000);
+    }, []);
+
+    if (loading) {
+        return <Loader />;
+    }
+
     return (
         <main className="flex flex-col bg-[#090908] transition-all duration-[0.3s] ease-[ease-out] delay-[0s] text-white">
             <div className="flex-1 flex flex-col justify-center items-center w-full">

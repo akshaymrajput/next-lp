@@ -10,8 +10,8 @@ const QuestBox = ({ questImg, questDetails }) => {
     const [expanded, setExpanded] = useState(true);
 
     return (
-        <div className="max-w-[520px] rounded-2xl p-4 sm:p-0">
-            <div className="relative">
+        <div className="max-w-[520px] sm:min-w-[500px] rounded-2xl p-4 sm:p-0">
+            <div className="relative z-10">
                 <div
                     className={`flex flex-col sm:flex-row w-full justify-center items-center gap-8 bg-[rgba(255,255,255,0.05)] ${
                         !expanded ? "rounded-2xl" : "rounded-t-2xl"
@@ -62,7 +62,7 @@ const QuestBox = ({ questImg, questDetails }) => {
                 {expanded && (
                     <div className="max-h-[350px] overflow-y-scroll px-2 py-6 sm:px-6 flex flex-col gap-2 bg-[#101010] w-full no-scrollbar">
                         {questDetails.tasks?.map((task, index) => (
-                            <QuestTask task={task} />
+                            <QuestTask key={index} task={task} />
                         ))}
                     </div>
                 )}

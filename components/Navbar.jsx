@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import useScreenSize from "@/hooks/useScreenSize";
 import { FiSearch } from "react-icons/fi";
 import { BiMenu } from "react-icons/bi";
@@ -11,19 +11,20 @@ const links = ["Compass", "Explore", "Academy", "NFTs", "For Projects"];
 
 const Navbar = () => {
     const { isMobile, isTablet, isDesktop } = useScreenSize();
-    const [menuOpen, setMenuOpen] = React.useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     return (
         <div
             className={`sticky top-0 z-50 ${
                 isMobile ? "" : "p-2"
-            } bg-black bg-opacity-10 backdrop-blur-[5px] w-full`}
+            } bg-black bg-opacity-10 backdrop-blur-[5px] w-full h-[64px]`}
         >
             {!(isMobile || isTablet) && (
                 <div className="flex justify-center items-center gap-4">
                     <div className="">
                         <Image
                             src="https://www.intract.io/logo/intract_text.svg"
+                            alt="logo"
                             width={100}
                             height={50}
                         />
@@ -57,6 +58,7 @@ const Navbar = () => {
                             <div className="w-12 h-12 border rounded-full flex justify-center items-center border-[#fa8922] cursor-pointer">
                                 <Image
                                     src="https://www.intract.io/assets/broadcast_or-04af786c.svg"
+                                    alt="broadcast"
                                     width={16}
                                     height={16}
                                 />
@@ -76,6 +78,7 @@ const Navbar = () => {
                     <div className="relative">
                         <Image
                             src="https://www.intract.io/logo/intract_text.svg"
+                            alt="logo"
                             width={100}
                             height={50}
                         />
@@ -90,7 +93,7 @@ const Navbar = () => {
             )}
 
             {(isMobile || isTablet) && menuOpen && (
-                <div className="relative z-50 flex flex-col items-center gap-12 h-screen w-full px-2 py-24 backdrop-blur-3xl bg-opacity-100 bg-black">
+                <div className="relative z-50 flex flex-col items-center gap-12 h-screen w-full px-2 py-24 backdrop-blur-3xl bg-opacity-100 bg-black shadow-[0px_0px_0px_50px_#000000]">
                     <div
                         className="absolute text-4xl right-6 top-6 cursor-pointer"
                         onClick={() => setMenuOpen(false)}
@@ -131,6 +134,7 @@ const Navbar = () => {
                             <div className="w-12 h-12 border rounded-full flex justify-center items-center border-[#fa8922] cursor-pointer">
                                 <Image
                                     src="https://www.intract.io/assets/broadcast_or-04af786c.svg"
+                                    alt="broadcast"
                                     width={16}
                                     height={16}
                                 />

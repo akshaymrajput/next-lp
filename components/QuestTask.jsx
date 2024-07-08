@@ -5,11 +5,12 @@ import CustomHR from "./CustomHR";
 
 const QuestTask = ({ task }) => {
     return (
-        <div className="relative border border-[rgba(255,255,255,0.05)] rounded-xl p-2 bg-[rgba(255,255,255,0.05)] w-full">
-            <div className="flex sm:items-start flex-col items-center sm:flex-row gap-3 w-full">
+        <div className="relative border border-[rgba(255,255,255,0.05)] rounded-xl p-2 bg-[rgba(255,255,255,0.05)] w-full h-[200px] sm:h-[100px]">
+            <div className="flex sm:items-start flex-col items-center sm:flex-row gap-3 w-full h-full">
                 <div className="relative w-full max-w-[160px] aspect-square sm:w-[120px] sm:h-[80px]">
                     <Image
                         src={task.img}
+                        alt="task img"
                         fill={true}
                         className="rounded-xl object-cover"
                     />

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Timer from "./Timer";
 import Image from "next/image";
@@ -6,12 +7,14 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import CustomHR from "./CustomHR";
 import RewardInfo from "./RewardInfo";
 import pathlink from "@/public/images/pathlink.svg";
+import useScreenSize, { isMobile } from "@/hooks/useScreenSize";
 
 const Reward = ({ rewardDetails }) => {
     const reward = rewardDetails.reward;
+    const { isMobile, isTablet, isDesktop } = useScreenSize();
 
     return (
-        <div className="w-[320px] flex flex-col gap-4 relative">
+        <div className="w-full p-6 sm:p-0 sm:w-[320px] flex flex-col gap-4 relative">
             <Timer
                 timerData={rewardDetails.timer}
                 days={0}
@@ -23,9 +26,10 @@ const Reward = ({ rewardDetails }) => {
                 <div className="relative w-full rounded-xl p-3 border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,.05)]">
                     <Image
                         src={reward.img}
+                        alt="reward img"
                         width={320}
                         height={300}
-                        className="object-cover h-full rounded-md"
+                        className="object-cover h-full w-full rounded-md"
                     />
                     <div className="absolute right-6 top-6 z-20 bg-[#0009] py-[2px] px-[4px] rounded-md text-[rgba(255,255,255,0.8)]">
                         {reward.type}
@@ -43,7 +47,7 @@ const Reward = ({ rewardDetails }) => {
                             </div>
                         </div>
                         <CustomHR />
-                        <div className="flex flex-col text-xs gap-2">
+                        <div className="flex flex-col text-xs gap-4">
                             {reward.steps.map((step, index) => (
                                 <div
                                     key={index}
@@ -61,16 +65,25 @@ const Reward = ({ rewardDetails }) => {
                                     <FaArrowRightLong />
                                 </span>
                             </button>
+                            {(isMobile || isTablet) && (
+                                <RewardInfo info={rewardDetails.info} />
+                            )}
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="absolute left-[380px] top-[50px] w-full">
-                <RewardInfo info={rewardDetails.info} />
-                <div className="absolute left-[-60px]">
-                    <Image src={pathlink} />
+            {isDesktop && (
+                <div className="absolute left-[380px] top-[50px] w-full">
+                    <RewardInfo info={rewardDetails.info} />
+                    <div className="absolute left-[-60px]">
+                        <Image
+                            src={pathlink}
+                            alt="path"
+                            style={{ width: "auto", height: "auto" }}
+                        />
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 };
