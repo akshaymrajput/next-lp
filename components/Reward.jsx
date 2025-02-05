@@ -30,6 +30,7 @@ const Reward = ({ rewardDetails }) => {
                         width={320}
                         height={300}
                         className="object-cover h-full w-full rounded-md"
+                        unoptimized
                     />
                     <div className="absolute right-6 top-6 z-20 bg-[#0009] py-[2px] px-[4px] rounded-md text-[rgba(255,255,255,0.8)]">
                         {reward.type}

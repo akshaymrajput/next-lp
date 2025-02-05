@@ -23,7 +23,7 @@ const Navbar = () => {
                 <div className="flex justify-center items-center gap-4">
                     <div className="">
                         <Image
-                            src="https://www.intract.io/logo/intract_text.svg"
+                            src="/images/navbar/intract_text.svg"
                             alt="logo"
                             width={100}
                             height={50}
@@ -57,7 +57,7 @@ const Navbar = () => {
                         <div className="flex justify-center items-center">
                             <div className="w-12 h-12 border rounded-full flex justify-center items-center border-[#fa8922] cursor-pointer">
                                 <Image
-                                    src="https://www.intract.io/assets/broadcast_or-04af786c.svg"
+                                    src="/images/navbar/broadcasting.png"
                                     alt="broadcast"
                                     width={16}
                                     height={16}
@@ -77,7 +77,7 @@ const Navbar = () => {
                 <div className="flex h-[64px] justify-between items-center px-2">
                     <div className="relative">
                         <Image
-                            src="https://www.intract.io/logo/intract_text.svg"
+                            src="/images/navbar/intract_text.svg"
                             alt="logo"
                             width={100}
                             height={50}
@@ -133,7 +133,7 @@ const Navbar = () => {
                         <div className="flex justify-center items-center">
                             <div className="w-12 h-12 border rounded-full flex justify-center items-center border-[#fa8922] cursor-pointer">
                                 <Image
-                                    src="https://www.intract.io/assets/broadcast_or-04af786c.svg"
+                                    src="/images/navbar/broadcasting.png"
                                     alt="broadcast"
                                     width={16}
                                     height={16}

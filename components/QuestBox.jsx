@@ -43,7 +43,7 @@ const QuestBox = ({ questImg, questDetails }) => {
 
                         <div className="flex justify-center w-fit text-sm font-semibold gap-1 py-2 px-4 border border-gray-800 rounded-full bg-[rgba(255,255,255,0.07)]">
                             <Image
-                                src="https://www.intract.io/assets/xp-icon-aacd204a.svg"
+                                src="/images/data/coin.svg"
                                 width={18}
                                 height={16}
                                 alt="xp"

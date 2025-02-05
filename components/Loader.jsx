@@ -7,10 +7,11 @@ const Loader = () => {
         <div className="flex items-center justify-center min-h-screen bg-black">
             <div className="p-6 rounded-lg animate-pulse">
                 <Image
-                    src="https://www.intract.io/assets/wojack-loader-a996330d.gif"
+                    src="/images/data/wojack-loader-a996330d.gif"
                     alt="Loading..."
                     width={150}
                     height={150}
+                    unoptimized
                 />
             </div>
         </div>

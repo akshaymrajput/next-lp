@@ -1,12 +1,12 @@
 export const rewardDetails = {
     timer: {
         title: "Reward unlocks in",
-        backgroundImg: "https://www.intract.io/assets/dotBg-149528a0.png",
+        backgroundImg: "/images/data/dotBg.png",
     },
 
     reward: {
         type: "Lucky Draw",
-        img: "https://www.intract.io/assets/kol-reward-12e6ae06.gif",
+        img: "/images/data/kol.gif",
         heading: "Exclusive Community",
         social: {
             type: "Discord",

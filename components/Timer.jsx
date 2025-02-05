@@ -29,8 +29,13 @@ const Timer = ({ timerData, days, hours, minutes, seconds }) => {
                 <span>{timerData.title}</span>
             </div>
             <CustomHR />
-            <div className="relative w-full h-fit border border-[rgba(255,255,255,.05)] rounded-xl p-4">
-                <Image src={timerData.backgroundImg} fill={true} />
+            <div className="relative w-full h-fit border border-[rgba(255,255,255,.05)] rounded-xl p-4 z-10 overflow-hidden">
+                <Image
+                    src={timerData.backgroundImg}
+                    width={300}
+                    height={100}
+                    className="absolute top-0 left-0 scale-125"
+                />
                 <div className="flex justify-between">
                     <div className="flex flex-col items-center z-10">
                         <div className="font-extrabold text-2xl text-[rgba(255,255,255,.6)]">
